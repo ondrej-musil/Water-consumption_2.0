@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <!-- matter.js v0.19.0 -->
+    <script src="libraries/matter.min.js"></script>
   </head>
+
   <body>
-    <main>
-    </main>
+    
+    <div id="tooltip" style="display: none;">Tooltip Text</div>
+    <!-- interface -->
+    <div id="interface">
+
+      <div class="ui-element">
+        <button id="pause-button">Pause</button>
+      </div>
+       <!-- Explanation text -->
+       <p>
+         </p>
+      <div class="ui-element">
+        <div id="info-box">
+          <p id="info-text">Zde se zobrazí informace.</p>
+        </div>
+      </div>
+      <!-- title -->
+      <h1></h1>
+
+      <!-- sliders -->
+      <div class="ui-group">
+        <!-- slider: frequency -->
+        <div class="ui-element">
+          <label for="frequency-slider">Frequency</label>
+          <input
+            id="frequency-slider"
+            type="range"
+            min="0"
+            max="2000"
+            value="200"
+            step="1"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- sketch -->
+    <div id="sketch">
+      <!-- sketch will appear here! -->
+      <div id="canvas"></div>
+    </div>
+
+    
+
+    <!-- load our sketch.js -->
     <script src="sketch.js"></script>
   </body>
 </html>
+
+
+
+
