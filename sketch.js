@@ -34,12 +34,12 @@ let consumptionData = [];
 
 /* - - Preload - - */
 function preload() {
-  img = loadImage("images/2water.png"); // Load the source image
-  faucetImg = loadImage("images/faucet_2.png"); // Load the faucet image
+  img = loadImage("2water.png"); // Load the source image
+  faucetImg = loadImage("faucet_2.png"); // Load the faucet image
 
   // Load and parse the CSV file
   loadTable(
-    "images/spotreba.csv",
+    "spotreba.csv",
     "csv",
     "header",
     function (table) {
