@@ -1,0 +1,145 @@
+/* reset our CSS */
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100%; /* Ensure body and html take up full height */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* page layout */
+
+body {
+  display: grid;
+  background: #000;
+  grid-template-columns: 400px 1fr;
+  overflow: hidden;
+}
+
+#sketch {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Take up remaining space */
+  filter: blur(1rem) saturate(220%);
+}
+
+#interface {
+  background: #000;
+  color: #000;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* input and group styling */
+input {
+  width: 100%;
+}
+
+.ui-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+.ui-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* slider styling */
+input[type=range] {
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  background: #575757;
+  height: 6px;
+  margin-top: 0.5rem;
+}
+
+input[type=range] {
+  width: 200%; /* Increase the width of the slider */
+  max-width: 600px; /* Optionally, set a max width to avoid it being too long */
+  border: 0;
+  box-shadow: none;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  background: #575757;
+  height: 6px;
+  margin-top: -5rem;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  box-shadow: none;
+  background: white;
+  border-radius: 100%;
+}
+
+#info-box {
+  width: 100%;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  border: 0px solid #575757; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Text color */
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  margin-top: -20px; /* Space between slider and info box */
+}
+
+#info-text {
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+}
+
+#year-display {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: black; /* Make the text black */
+  margin-bottom: 5px; /* Add spacing between the text and the slider */
+}
+
+/* Button styling */
+#pause-button {
+  font-size: 12px; /* Reduce font size */
+  padding: 5px 10px; /* Reduce padding */
+  border: 1px solid #575757;
+  background-color: #333;
+  color: white;
+  border-radius: 3px; /* Slightly rounded corners */
+  cursor: pointer;
+}
+
+#pause-button:hover {
+  background-color: #444;
+}
+
+#water-consumption-heading {
+  font-size: 18px; /* Velikost písma */
+  color: white; /* Barva textu */
+  margin-bottom: -1rem; /* Mezery pod nadpisem */
+  text-align: left; /* Zarovnání textu vlevo */
+}
